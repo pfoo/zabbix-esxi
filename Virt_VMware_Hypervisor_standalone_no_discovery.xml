@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2016-01-29T12:02:38Z</date>
+    <date>2016-01-29T16:30:46Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -1004,4 +1004,50 @@
             <screens/>
         </template>
     </templates>
+    <triggers>
+        <trigger>
+            <expression>{Template Virt VMware Hypervisor standalone no discovery:vmware.hv.fullname[{$URL},{$UUID}].diff(0)}&gt;0</expression>
+            <name>VMware Hypervisor on {HOST.NAME} fullname has changed</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description>fullname has changed&#13;
+Did build number increases ?</description>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Virt VMware Hypervisor standalone no discovery:vmware.hv.version[{$URL},{$UUID}].diff(0)}&gt;0</expression>
+            <name>VMware Hypervisor on {HOST.NAME} has changed version</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Virt VMware Hypervisor standalone no discovery:vmware.hv.status[{$URL},{$UUID}].last()}&lt;&gt;1</expression>
+            <name>VMware Hypervisor Overall status is not GREEN on {HOST.NAME}</name>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description>The overall alarm status of the host: &#13;
+gray - unknown&#13;
+red - it has a problem&#13;
+yellow - it might have a problem.</description>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Virt VMware Hypervisor standalone no discovery:vmware.hv.uptime[{$URL},{$UUID}].change(0)}&lt;0</expression>
+            <name>{HOST.NAME} has just been restarted</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+    </triggers>
 </zabbix_export>
