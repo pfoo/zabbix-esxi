@@ -1,6 +1,10 @@
 This template allows you to monitor a standalone ESXi host without any kind of host discovery that is required by zabbix official vmware template.
 The template is the same as Template Virt VMware Hypervisor but with all {HOST.HOST} variables replaced by {$UUID}
 
+If you have not already done so, you need to activate zabbix server vmware polling in your zabbix server configuration file (/etc/zabbix/zabbix_server.conf).
+StartVMwareCollectors should be set to a value depending on the number of host you wish to monitor: servicenum < StartVMwareCollectors < (servicenum * 2) where servicenum is the number of VMware services. 
+If you wish to monitor 1 ESXi host, set StartVMwareCollectors to 2.
+
 Import this template to your templates inventory.
 Create an host for your ESXi hypervisor. You don't need any agent/ipmi/snmp interfaces.
 Link the host to this template.
