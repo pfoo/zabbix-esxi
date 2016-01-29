@@ -1,4 +1,5 @@
-The template is the same as Template Virt VMware Hypervisor but with all {HOST.HOST} variables replaces by {$UUID}
+This template allows you to monitor a standalone ESXi host without any kind of host discovery that is required by zabbix official vmware template.
+The template is the same as Template Virt VMware Hypervisor but with all {HOST.HOST} variables replaced by {$UUID}
 
 Import this template to your templates inventory.
 Create an host for your ESXi hypervisor. You don't need any agent/ipmi/snmp interfaces.
