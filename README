@@ -1,0 +1,16 @@
+The template is the same as Template Virt VMware Hypervisor but with all {HOST.HOST} variables replaces by {$UUID}
+
+Import this template to your templates inventory.
+Create an host for your ESXi hypervisor. You don't need any agent/ipmi/snmp interfaces.
+Link the host to this template.
+Creates 4 macros :
+  {$URL}      -> https://esxi.hostname/sdk 
+  {$USERNAME} -> any esxi user that have at least readonly access (recommended for obvious security reason)
+  {$PASSWORD} -> the user's password
+  {$UUID}     -> esxi host UUID
+
+*How to obtain ESXi UUID*
+0. You need to enable MOB vib, esxcli does not seems to provide the valid uuid for this.
+1. enable MOB vib : Go to you're vsphere Advanced Settings, Config, Hostagent, plugins, solo, check "Config.HostAgent.plugins.solo.enableMob"
+2. Browse to https://esxi.hostname/mob/?moid=ha-host&doPath=hardware.systemInfo
+3. disable MOB vib again (uncheck Config.HostAgent.plugins.solo.enableMob)
