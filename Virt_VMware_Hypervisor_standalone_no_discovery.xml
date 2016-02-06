@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2016-01-29T17:30:50Z</date>
+    <date>2016-02-06T06:13:47Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -45,7 +45,7 @@
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>vmware.hv.memory.size.ballooned[{$URL},{$UUID}]</key>
-                    <delay>60</delay>
+                    <delay>300</delay>
                     <history>90</history>
                     <trends>365</trends>
                     <status>0</status>
@@ -358,7 +358,7 @@
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>vmware.hv.cpu.usage[{$URL},{$UUID}]</key>
-                    <delay>60</delay>
+                    <delay>300</delay>
                     <history>90</history>
                     <trends>365</trends>
                     <status>0</status>
@@ -487,7 +487,7 @@
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>vmware.hv.network.in[{$URL},{$UUID},bps]</key>
-                    <delay>60</delay>
+                    <delay>300</delay>
                     <history>90</history>
                     <trends>365</trends>
                     <status>0</status>
@@ -530,7 +530,7 @@
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>vmware.hv.network.out[{$URL},{$UUID},bps]</key>
-                    <delay>60</delay>
+                    <delay>300</delay>
                     <history>90</history>
                     <trends>365</trends>
                     <status>0</status>
@@ -616,7 +616,7 @@
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>vmware.hv.status[{$URL},{$UUID}]</key>
-                    <delay>60</delay>
+                    <delay>300</delay>
                     <history>90</history>
                     <trends>365</trends>
                     <status>0</status>
@@ -750,7 +750,7 @@
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>vmware.hv.memory.used[{$URL},{$UUID}]</key>
-                    <delay>60</delay>
+                    <delay>300</delay>
                     <history>90</history>
                     <trends>365</trends>
                     <status>0</status>
@@ -914,7 +914,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>vmware.hv.datastore.read[{$URL},{$UUID},{#DATASTORE},latency]</key>
-                            <delay>60</delay>
+                            <delay>300</delay>
                             <history>90</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -957,7 +957,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>vmware.hv.datastore.write[{$URL},{$UUID},{#DATASTORE},latency]</key>
-                            <delay>60</delay>
+                            <delay>300</delay>
                             <history>90</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -1130,7 +1130,7 @@ yellow - it might have a problem.</description>
                     <drawtype>3</drawtype>
                     <color>EEEEEE</color>
                     <yaxisside>0</yaxisside>
-                    <calc_fnc>4</calc_fnc>
+                    <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
                         <host>Template Virt VMware Hypervisor standalone no discovery</host>
