@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2016-02-06T06:13:47Z</date>
+    <date>2016-04-27T16:10:44Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -1023,6 +1023,16 @@ Did build number increases ?</description>
             <status>0</status>
             <priority>1</priority>
             <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Virt VMware Hypervisor standalone no discovery:vmware.hv.status[{$URL},{$UUID}].nodata(600)}=1</expression>
+            <name>VMware Hypervisor on {HOST.NAME} is unreachable</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description>STATUS item has not been updated since 10 minutes.</description>
             <type>0</type>
             <dependencies/>
         </trigger>
