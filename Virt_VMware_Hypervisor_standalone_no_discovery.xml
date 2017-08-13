@@ -1046,7 +1046,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},pfree]</key>
-                            <delay>60</delay>
+                            <delay>300</delay>
                             <history>90</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -1090,7 +1090,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE}]</key>
-                            <delay>60</delay>
+                            <delay>300</delay>
                             <history>90</history>
                             <trends>365</trends>
                             <status>0</status>
