@@ -1045,7 +1045,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>vmware.hv.datastore.size[{$URL},{UUID},{#DATASTORE},pfree]</key>
+                            <key>vmware.hv.datastore.size[{$URL},{$UUID},{#DATASTORE},pfree]</key>
                             <delay>300</delay>
                             <history>90</history>
                             <trends>365</trends>
@@ -1089,7 +1089,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>vmware.hv.datastore.size[{$URL},{UUID},{#DATASTORE}]</key>
+                            <key>vmware.hv.datastore.size[{$URL},{$UUID},{#DATASTORE}]</key>
                             <delay>300</delay>
                             <history>90</history>
                             <trends>365</trends>
