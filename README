@@ -15,7 +15,13 @@ Creates 4 macros :
   {$UUID}     -> esxi host UUID
 
 *How to obtain ESXi UUID*
-0. You need to enable MOB vib, esxcli does not seems to provide the valid uuid for this.
-1. enable MOB vib : Go to you're vsphere Advanced Settings, Config, Hostagent, plugins, solo, check "Config.HostAgent.plugins.solo.enableMob"
+0. You need to enable MOB vib as esxcli does not seems to provide the valid uuid for this.
+1. enable MOB vib using one of these methods : 
+    * Using vsphere client : Go to you're vsphere Advanced Settings, Config, Hostagent, plugins, solo, check "Config.HostAgent.plugins.solo.enableMob"
+    * Using esxi console : `vim-cmd hostsvc/advopt/update Config.HostAgent.plugins.solo.enableMob bool true`
+    * Using Powercli : `Get-VMHost #IPADDRESS | Set-VMHostAdvancedConfiguration -Name Config.HostAgent.plugins.solo.enableMob -Value True`
 2. Browse to https://esxi.hostname/mob/?moid=ha-host&doPath=hardware.systemInfo
-3. disable MOB vib again (uncheck Config.HostAgent.plugins.solo.enableMob)
+3. disable MOB vib again :
+    * Using vsphere client : uncheck Config.HostAgent.plugins.solo.enableMob
+    * Using esxi console : `vim-cmd hostsvc/advopt/update Config.HostAgent.plugins.solo.enableMob bool false`
+    * Using Powercli : `Get-VMHost #IPADDRESS | Set-VMHostAdvancedConfiguration -Name Config.HostAgent.plugins.solo.enableMob -Value False`
